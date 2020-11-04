@@ -240,7 +240,9 @@ The name of the service used for the ingress controller's validation webhook
 {{/*
  {{- template "kong.renderEnv" $completeEnv -}}
 */}}
-# {{ printf "!!! %#v" $completeEnv }}
+# {{ printf "!!! completeEnv %#v" $completeEnv }}
+# {{ printf "!!! autoEnv %#v" $autoEnv }}
+# {{ printf "!!! userEnv %#v" $userEnv }}
 {{- template "kong.renderEnv" $autoEnv -}}
 
 {{- end -}}
