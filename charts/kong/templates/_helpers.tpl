@@ -235,7 +235,7 @@ The name of the service used for the ingress controller's validation webhook
       ====== MERGE AND RENDER ENV BLOCK ======
 */}}
 
-{{- $completeEnv := mergeOverwrite $autoEnv $userEnv -}}
+{{- $completeEnv := mustMergeOverwrite $autoEnv $userEnv -}}
 
 {{/*
  {{- template "kong.renderEnv" $completeEnv -}}
