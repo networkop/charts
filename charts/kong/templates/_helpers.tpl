@@ -235,7 +235,7 @@ The name of the service used for the ingress controller's validation webhook
       ====== MERGE AND RENDER ENV BLOCK ======
 */}}
 
-{{- $completeEnv := mustMergeOverwrite $autoEnv $userEnv -}}
+{{- $completeEnv := mergeOverwrite $autoEnv $userEnv -}}
 
 {{/*
  {{- template "kong.renderEnv" $completeEnv -}}
@@ -243,7 +243,6 @@ The name of the service used for the ingress controller's validation webhook
 # {{ printf "!!! completeEnv %#v" $completeEnv }}
 # {{ printf "!!! autoEnv %#v" $autoEnv }}
 # {{ printf "!!! userEnv %#v" $userEnv }}
-# {{ printf "!!! mergeOverwrite %#v" mergeOverwrite $userEnv }}
 {{- template "kong.renderEnv" $autoEnv -}}
 
 {{- end -}}
