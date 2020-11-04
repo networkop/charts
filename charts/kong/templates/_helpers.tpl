@@ -244,7 +244,6 @@ The name of the service used for the ingress controller's validation webhook
 # {{ printf "!!! autoEnv %#v" $autoEnv }}
 # {{ printf "!!! userEnv %#v" $userEnv }}
 # {{ printf "!!! mergeOverwrite %T" mergeOverwrite }}
-# {{ printf "!!! define %T" define }}
 {{- template "kong.renderEnv" $autoEnv -}}
 
 {{- end -}}
