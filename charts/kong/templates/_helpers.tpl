@@ -236,7 +236,7 @@ The name of the service used for the ingress controller's validation webhook
 */}}
 
 {{- $completeEnv := mergeOverwrite $autoEnv $userEnv -}}
-{{- template "kong.renderEnv" $completeEnv -}}
+{{- template "kong.renderEnv" $autoEnv -}}
 
 {{- end -}}
 
